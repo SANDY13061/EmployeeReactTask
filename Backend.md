@@ -8,7 +8,7 @@ This is the backend API for managing user authentication and employee records. T
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/SANDY13061/EmployeeReactTask.git
 cd backend
 ```
 
@@ -34,7 +34,7 @@ MYSQL_DATABASE=your_database
 ### 4. Start the backend server
 
 ```bash
-npm run dev
+node app.js
 ```
 
 The server will run at: `http://localhost:5000`.
@@ -53,11 +53,6 @@ backend/
 ├── package.json             # Project dependencies and scripts
 └── README.md                # Project instructions
 ```
-
-## Available Scripts
-
-- `npm run dev` – Starts the server in development mode using `nodemon`.
-- `npm start` – Starts the server in production mode.
 
 ## API Documentation
 
@@ -95,7 +90,7 @@ backend/
 
 #### Get All Employees
 
-- **URL**: `/api/employees`
+- **URL**: `/api/employees/all`
 - **Method**: `GET`
 - **Headers**: 
   ```json
@@ -107,7 +102,7 @@ backend/
 
 #### Create Employee
 
-- **URL**: `/api/employees`
+- **URL**: `/api/employees/create`
 - **Method**: `POST`
 - **Request Body**:
   ```json
@@ -125,7 +120,7 @@ backend/
 
 #### Edit Employee
 
-- **URL**: `/api/employees/:id`
+- **URL**: `/api/employees/update/:id`
 - **Method**: `PUT`
 - **Headers**: 
   ```json
@@ -138,7 +133,7 @@ backend/
 
 #### Delete Employee
 
-- **URL**: `/api/employees/:id`
+- **URL**: `/api/employees/delete/:id`
 - **Method**: `DELETE`
 - **Headers**: 
   ```json
@@ -150,26 +145,5 @@ backend/
 
 ## Database Setup
 
-1. **MySQL Configuration**: Ensure you have a running MySQL instance. Create the database and tables using the following SQL:
+1. **MySQL Configuration**: Ensure you have a running MySQL instance.Backend code automatically setup your database table 
 
-```sql
-CREATE DATABASE your_database;
-
-CREATE TABLE users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(255) NOT NULL,
-  password VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE employees (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255),
-  email VARCHAR(255),
-  mobile VARCHAR(20),
-  designation VARCHAR(100),
-  gender VARCHAR(10),
-  course VARCHAR(255),
-  img VARCHAR(255),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
