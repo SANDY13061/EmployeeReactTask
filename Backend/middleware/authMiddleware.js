@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Token Verification.
+ * @author Santhosh Kumar
+ * @created 2024-09-26
+ */
+
+
 const jwt = require('jsonwebtoken');
 
 const authMiddleware = (req, res, next) => {

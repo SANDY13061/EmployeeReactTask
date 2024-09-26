@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Employee Table Model.
+ * @author Santhosh Kumar
+ * @created 2024-09-26
+ */
+
+
 const { DataTypes } = require('sequelize');
 const sequelize = require('./index');
 

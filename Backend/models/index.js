@@ -1,3 +1,9 @@
+/**
+ * @fileoverview MYSQL connection.
+ * @author Santhosh Kumar
+ * @created 2024-09-26
+ */
+
 const { Sequelize } = require('sequelize');
 const dotenv = require('dotenv');
 

@@ -1,3 +1,9 @@
+/**
+ * @fileoverview Login,Register Router.
+ * @author Santhosh Kumar
+ * @created 2024-09-26
+ */
+
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');

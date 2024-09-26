@@ -1,3 +1,10 @@
+/**
+ * @fileoverview Main app.
+ * @author Santhosh Kumar
+ * @created 2024-09-26
+ */
+
+
 const express = require('express');
 const dotenv = require('dotenv');
 const sequelize = require('./models/index');
